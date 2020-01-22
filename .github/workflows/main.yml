@@ -13,5 +13,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: drudzikatlassian/test-action@v0.0.1-alpha
     - name: Test a one-line script
+      uses: drudzikatlassian/test-action@v0.0.1-alpha

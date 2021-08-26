@@ -37,4 +37,5 @@ jobs:
         run: |
           npm start
         env:
+          token: ${{ secrets.GITHUB_TOKEN }}
           CI: true

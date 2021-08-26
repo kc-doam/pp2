@@ -25,16 +25,20 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       
-      # https://github.com/actions/checkout/issues/6#issuecomment-544726182
-      
       - name: npm install, build, and test
         run: |
+#         git checkout "$(echo ${{ github.ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
+          echo Tooo is ${{ secrets.GITHUB_TOKEN }}
           npm install --ignore-scripts
           npm run build --if-present
           npm test
+        env:
+          CI: true
       
       - name: npm start test.js
         run: |
           npm start
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
         env:
           CI: true

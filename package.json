@@ -6,7 +6,7 @@
 	"license": "AGPL-3.0",
 	"main": "test.js",
 	"scripts": {
-		"test": "echo No Token. No Tests.",
+		"test": "echo \"ℹ️ No Token. No Tests.\"",
 		"start": "node --max-old-space-size=20 --expose-gc test.js"
 	},
 	"repository": {

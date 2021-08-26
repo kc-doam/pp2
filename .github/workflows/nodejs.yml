@@ -45,8 +45,8 @@ jobs:
       
       - name: npm start
         run: |
-          npm start
+          npm test
         env:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
           CI: true

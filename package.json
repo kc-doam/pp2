@@ -7,7 +7,7 @@
 	"main": "test.js",
 	"scripts": {
 		"test": "standard",
-		"start": "node --max-old-space-size=20 --expose-gc src/test.js"
+		"start": "node --max-old-space-size=20 --expose-gc test.js"
 	},
 	"repository": {
 		"type": "git",

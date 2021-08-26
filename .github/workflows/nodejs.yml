@@ -2,11 +2,6 @@
 
 name: Node.js CI
 
-inputs:
-  repo-token:  
-    description: A GitHub personal access token used to make comments on your behalf
-    required: true
-
 on:
   push:
     branches:

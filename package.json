@@ -1,13 +1,13 @@
 {
 	"name": "pp2",
 	"description": "Test script.",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"author": "lapscar <dbl2827@protonmail.com>",
 	"license": "AGPL-3.0",
 	"main": "test.js",
 	"scripts": {
 		"test": "node --max-old-space-size=20 --expose-gc test.js",
-		"start": "echo \"ℹ️ Start repo.js on ${{ github.ref }}.\" && node repo.js"
+		"start": "echo \"ℹ️ Start repo.js.\" && node repo.js"
 	},
 	"repository": {
 		"type": "git",

@@ -1,7 +1,7 @@
 {
 	"name": "pp2",
 	"description": "Test script.",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"author": "lapscar <dbl2827@protonmail.com>",
 	"license": "AGPL-3.0",
 	"main": "test.js",

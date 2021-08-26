@@ -37,3 +37,5 @@ jobs:
           npm install @actions/github
           npm install @actions/core
           npm start
+        env:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}

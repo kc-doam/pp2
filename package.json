@@ -18,6 +18,6 @@
 		"moment-timezone": "^0.5.26",
 		"node-soap": "^1.0.0",
 		"serialize-to-js": "^3.0.0",
-		"soap": "^0.29.0",
+		"soap": "^0.29.0"
 	}
 }

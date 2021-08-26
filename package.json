@@ -1,7 +1,7 @@
 {
 	"name": "pp2",
 	"description": "Test script.",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"author": "lapscar <dbl2827@protonmail.com>",
 	"license": "AGPL-3.0",
 	"main": "test.js",
@@ -11,7 +11,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/kc-doam/pp2.git"
+		"url": "ssh+https://github.com/kc-doam/pp2.git"
 	},
 	"dependencies": {
 		"dateformat": "^3.0.3",

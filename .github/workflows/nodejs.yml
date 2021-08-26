@@ -10,18 +10,18 @@ on:
     branches: [master]
 
 jobs:
-  build:
-    name: 🛠 Build
+  test:
+    name: 🛠 Test
     strategy:
       matrix:
         node-version: [10.x, 12.x]
     runs-on: ubuntu-latest
     
     steps:
-      - uses: actions/checkout@v2.1
+      - uses: actions/checkout@v2
       
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - uses: actions/setup-node@v1
+        name: Use Node.js ${{ matrix.node-version }}
         with:
           node-version: ${{ matrix.node-version }}
       
@@ -32,11 +32,21 @@ jobs:
           npm test
         env:
           CI: true
+
+  build:
+    name: 🛠 Build
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x]
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2
       
-      - name: npm start test.js
+      - name: npm start
         run: |
           npm start
         env:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          LARGE_SECRET_PASSPHRASE: ${{ secrets.LARGE_SECRET_PASSPHRASE }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
           CI: true

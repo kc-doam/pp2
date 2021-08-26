@@ -1,6 +1,6 @@
 # Тестовый запуск
 
-name: Node CI
+name: Node.js CI
 
 on:
   push:
@@ -20,8 +20,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - uses: actions/setup-node@v1
-        name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
       
@@ -30,8 +30,6 @@ jobs:
           npm install --ignore-scripts
           npm run build --if-present
           npm test
-        env:
-          CI: true
 
   build:
     name: 🛠 Build
@@ -41,8 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: actions/github
-      - uses: actions/core
+      - uses: [actions/github@v1, actions/core@v1]
       - uses: actions/checkout@v2
       
       - name: npm start
@@ -51,4 +48,3 @@ jobs:
         env:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
-          CI: true

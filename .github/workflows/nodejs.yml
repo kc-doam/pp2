@@ -2,6 +2,11 @@
 
 name: Node.js CI
 
+inputs:
+  repo-token:  
+    description: A GitHub personal access token used to make comments on your behalf
+    required: true
+
 on:
   push:
     branches:
@@ -39,7 +44,7 @@ jobs:
           npm install @actions/github
           npm install @actions/core
           npm run build --if-present
-          npm start
+          npm test
         env:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           CI: true

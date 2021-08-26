@@ -35,9 +35,7 @@ jobs:
 
       - name: npm start
         run: |
-          npm install @actions/core
-          npm install @actions/github
+          npm install @actions/toolkit
           npm start
         env:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}

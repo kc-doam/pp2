@@ -41,11 +41,12 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - uses: [actions/github, actions/core]
       - uses: actions/checkout@v2
       
       - name: npm start
         run: |
-          npm test
+          npm start
         env:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}

@@ -6,7 +6,7 @@
 	"license": "AGPL-3.0",
 	"main": "test.js",
 	"scripts": {
-		"test": "standard",
+		"test": "tap",
 		"start": "node --max-old-space-size=20 --expose-gc test.js"
 	},
 	"repository": {
@@ -19,5 +19,8 @@
 		"node-soap": "^1.0.0",
 		"serialize-to-js": "^3.0.0",
 		"soap": "^0.29.0"
+	},
+	"devDependencies": {
+		"tap": "^15.0.9"
 	}
 }

@@ -41,7 +41,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: [actions/github, actions/core]
+      - uses: actions/github
+      - uses: actions/core
       - uses: actions/checkout@v2
       
       - name: npm start

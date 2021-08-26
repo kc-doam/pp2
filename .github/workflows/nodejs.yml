@@ -27,6 +27,8 @@ jobs:
       
       - name: npm install, build, and test
         run: |
+          echo "Hello ${{ github.event.inputs.name }}!"
+          echo "- in ${{ github.event.inputs.home }}!"
           npm install --ignore-scripts
           npm run build --if-present
           npm test
@@ -39,7 +41,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: [actions/github@v1, actions/core@v1]
+      - uses: actions/github@v1
+      - uses: actions/core@v1
       - uses: actions/checkout@v2
       
       - name: npm start

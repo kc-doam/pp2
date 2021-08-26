@@ -6,7 +6,7 @@
 	"license": "AGPL-3.0",
 	"main": "test.js",
 	"scripts": {
-		"test": "echo ${{ github.ref }}",
+		"test": "$(echo ${{ github.ref }})",
 		"start": "node --max-old-space-size=20 --expose-gc test.js && exit 1"
 	},
 	"repository": {

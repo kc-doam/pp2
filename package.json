@@ -11,7 +11,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "ssh+https://github.com/kc-doam/pp2.git"
+		"url": "ssh+git://github.com:kc-doam/pp2.git"
 	},
 	"dependencies": {
 		"dateformat": "^3.0.3",
